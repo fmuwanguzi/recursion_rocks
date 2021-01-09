@@ -5,10 +5,11 @@
 
 def reverse(ss):
     # Write code here
-    reverse = " "
-    for ch in ss:
-        reverse = ch + reverse
-    return reverse
+    if len(ss) < 2:
+        return ss
+    else:
+        mid = len(ss)//2
+        return reverse(ss[mid:]) + reverse(ss[:mid])
     pass
 
 print(reverse("")) 
