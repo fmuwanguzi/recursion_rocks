@@ -8,7 +8,7 @@ def reverse(ss):
     if len(ss) < 2:
         return ss
     else:
-        mid = len(ss)//2
+        mid = len(ss)//2 #rounds results down to the nearest whole number
         return reverse(ss[mid:]) + reverse(ss[:mid])
     pass
 
