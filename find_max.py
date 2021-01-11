@@ -11,5 +11,16 @@ def find_max(l):
         return max(l[0], find_max(l[1:]))
     pass
 
+#solution 2
+
+def find_max2(l):
+    if len(l) == 1:
+        return l[0]
+    if l[0] > find_max2(l[1:]):
+        return l[0]
+    else:
+        return find_max2(l[1:])
+
 print(find_max([1, 4, 45, 6, -50, 10, 2]))
+print(find_max2([1, 4, 45, 6, -50, 10, 2]))
 # => 45
